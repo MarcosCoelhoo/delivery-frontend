@@ -8,19 +8,44 @@
   --color-base-dark: #265527;
   --color-base-very-dark: #0D260E;
 
-  --grey-50: #fafafa;
-  --grey-100: #efefef;
-  --grey-200: #dcdcdc;
-  --grey-300: #bdbdbd;
-  --grey-400: #989898;
-  --grey-500: #7c7c7c;
-  --grey-600: #656565;
-  --grey-700: #525252;
-  --grey-800: #464646;
-  --grey-900: #3d3d3d;
-  --grey-950: #292929;
+  --color-grey-50: #fafafa;
+  --color-grey-100: #efefef;
+  --color-grey-200: #dcdcdc;
+  --color-grey-300: #bdbdbd;
+  --color-grey-400: #989898;
+  --color-grey-500: #7c7c7c;
+  --color-grey-600: #656565;
+  --color-grey-700: #525252;
+  --color-grey-800: #464646;
+  --color-grey-900: #3d3d3d;
+  --color-grey-950: #292929;
 
   --font-title: 'Barlow', sans-serif;
   --font-text: 'Lato', sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-grey-50);
+}
+
+button {
+  outline: none;
+  border-radius: 8;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
