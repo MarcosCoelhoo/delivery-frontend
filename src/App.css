@@ -3,7 +3,7 @@
 
 :root {
   --color-base-very-light: #F4FAF3;
-  --color-base-ligth: #9BDA9B;
+  --color-base-light: #9BDA9B;
   --color-base: #43A443;
   --color-base-dark: #265527;
   --color-base-very-dark: #0D260E;
@@ -32,6 +32,7 @@
 
 body {
   background: var(--color-grey-50);
+
 }
 
 button {
@@ -45,7 +46,21 @@ ul, li {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   width: 100%;
   object-fit: cover;
+}
+
+.sectionContainer {
+  padding: 0 4.25rem;
+}
+
+@media (max-width: 40.625rem) {
+  .sectionContainer {
+    padding: 0 1.25rem;
+  }
 }
