@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './style/Cart.module.css';
+import styles from '../styles/home/Cart.module.css';
 import { ShoppingCartSimple } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
 
