@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './style/Hero.module.css';
+import styles from '../styles/home/Hero.module.css';
 import { Alarm, MapTrifold, WhatsappLogo } from '@phosphor-icons/react';
 
 const Hero = () => {

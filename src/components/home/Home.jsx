@@ -5,7 +5,7 @@ import Menu from './Menu';
 import Cart from './Cart';
 import { ShoppingCartSimple } from '@phosphor-icons/react';
 
-import styles from './style/Home.module.css';
+import styles from '../styles/home/Home.module.css';
 
 const Home = () => {
   return (
