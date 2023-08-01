@@ -1,0 +1,173 @@
+.cartContainer {
+  /* border: 1px solid red; */
+  padding-top: 3.125rem;
+}
+
+.cart {
+  border: 1px solid var(--color-grey-200);
+  border-radius: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--color-grey-200);
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-base-dark);
+}
+
+.header svg {
+  color: var(--color-base);
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--color-grey-200);
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.image {
+  width: 5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.name {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-grey-950);
+}
+
+.price {
+  font-family: var(--font-text);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-base);
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  height: fit-content;
+  gap: 16px;
+  border: 1px solid var(--color-grey-200);
+  border-radius: 0.25rem;
+  font-family: var(--font-text);
+}
+
+.count {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-grey-950);
+}
+
+.quantity button {
+  background: none;
+  color: var(--color-base);
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.footer {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: end;
+  align-items: center;
+  padding: 1.25rem 0.75rem;
+  font-family: var(--font-text);
+}
+
+.total {
+  font-size: 1.25rem;
+  color: var(--color-base-very-dark);
+  font-weight: 700;
+}
+
+.closeOrder {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-base-very-light);
+  background: var(--color-base);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-base);
+  padding: 0.5rem 0.75rem;
+  text-transform: uppercase;
+
+  transition: all .3s ;
+}
+
+.closeOrder:hover {
+  background: var(--color-grey-50);
+  color: var(--color-base);
+  
+}
+
+@media (max-width: 56.25rem) {
+  .cartContainer {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .header svg {
+    color: var(--color-base);
+    width: 1.25rem;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .image {
+    width: 4rem;
+  }
+
+  .count {
+    font-size: 1.25rem;
+  }
+  
+  .quantity button {
+    font-size: 1.25rem;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .closeOrder {
+    font-size: 1rem;
+  }
+}
