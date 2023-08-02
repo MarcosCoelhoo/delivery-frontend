@@ -3,11 +3,29 @@ import React from 'react';
 import styles from '../styles/home/Cart.module.css';
 import { ShoppingCartSimple } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../contexts/CartContext';
 
 const Cart = () => {
+  const { isOpenCart, setIsOpenCart, containerRef, modalRef } =
+    React.useContext(CartContext);
+
+  function handleClickOutside(event) {
+    if (event.target === containerRef.current) {
+      setIsOpenCart(!isOpenCart);
+    }
+  }
+
+  React.useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  });
+
+  if (!isOpenCart) return null;
   return (
-    <section className={styles.cartContainer}>
-      <div className={styles.cart}>
+    <section ref={containerRef} className={styles.cartContainer}>
+      <div ref={modalRef} className={styles.cart}>
         <div className={styles.header}>
           <ShoppingCartSimple size={32} weight="duotone" />
           <h1 className={styles.title}>Carrinho</h1>
