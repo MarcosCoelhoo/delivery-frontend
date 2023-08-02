@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../styles/home/Menu.module.css';
+import styles from '../styles/home/MenuProducts.module.css';
 
-const Menu = () => {
+const MenuProducts = () => {
   return (
     <section className={styles.menu}>
       <h1 className={styles.title}>Cardápio</h1>
@@ -74,4 +74,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default MenuProducts;

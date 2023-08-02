@@ -1,9 +1,11 @@
 import React from 'react';
 import Hero from './Hero';
-import Menu from './Menu';
+import MenuProducts from './MenuProducts';
 
 import Cart from './Cart';
-import { ShoppingCartSimple } from '@phosphor-icons/react';
+
+import { CartStorage } from '../contexts/CartContext';
+import CartButton from './CartButton';
 
 import styles from '../styles/home/Home.module.css';
 
@@ -12,14 +14,14 @@ const Home = () => {
     <>
       <Hero />
 
-      <main className={`${styles.main} sectionContainer`}>
-        <Menu />
-        <Cart />
+      <CartStorage>
+        <main className={`${styles.main} sectionContainer`}>
+          <MenuProducts />
+          <Cart />
 
-        <button className={styles.cartButton}>
-          <ShoppingCartSimple size={32} weight="duotone" />
-        </button>
-      </main>
+          <CartButton className={styles.cartButton} />
+        </main>
+      </CartStorage>
     </>
   );
 };
