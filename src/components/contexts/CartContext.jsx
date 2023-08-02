@@ -6,10 +6,11 @@ export const CartStorage = ({ children }) => {
   const [isOpenCart, setIsOpenCart] = React.useState(false);
   const containerRef = React.useRef();
   const modalRef = React.useRef();
+  const size = window.innerWidth;
 
   React.useEffect(() => {
     const body = document.body;
-    if (isOpenCart) {
+    if (isOpenCart && size < 900) {
       body.style.overflow = 'hidden';
     } else {
       body.style.overflow = '';
@@ -17,7 +18,7 @@ export const CartStorage = ({ children }) => {
     return () => {
       body.style.overflow = '';
     };
-  }, [isOpenCart]);
+  }, [isOpenCart, size]);
 
   React.useEffect(() => {
     if (modalRef.current) {
@@ -30,18 +31,16 @@ export const CartStorage = ({ children }) => {
   }, [isOpenCart]);
 
   React.useEffect(() => {
-    const size = window.innerWidth;
-
     if (size > 900) {
       setIsOpenCart(true);
     } else {
       setIsOpenCart(false);
     }
-  }, []);
+  }, [size]);
 
   return (
     <CartContext.Provider
-      value={{ isOpenCart, setIsOpenCart, containerRef, modalRef }}
+      value={{ isOpenCart, setIsOpenCart, containerRef, modalRef, size }}
     >
       {children}
     </CartContext.Provider>
