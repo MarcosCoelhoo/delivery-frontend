@@ -1,7 +1,9 @@
 .menu {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+
 }
 
 .title {
@@ -53,6 +55,7 @@
   font-size: 2rem;
   font-weight: 600;
   color: var(--color-base-dark);
+  text-transform: capitalize;
 }
 
 .description {

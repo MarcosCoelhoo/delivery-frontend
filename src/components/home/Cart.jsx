@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 
 const Cart = () => {
-  const { isOpenCart, setIsOpenCart, containerRef, modalRef } =
+  const { isOpenCart, setIsOpenCart, containerRef, modalRef, size } =
     React.useContext(CartContext);
 
   function handleClickOutside(event) {
-    if (event.target === containerRef.current) {
+    if (event.target === containerRef.current && size < 900) {
       setIsOpenCart(!isOpenCart);
     }
   }
