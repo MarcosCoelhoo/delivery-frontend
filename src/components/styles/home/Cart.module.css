@@ -98,6 +98,7 @@
   font-weight: 600;
   font-size: 1.5rem;
   border: none;
+  cursor: pointer;
 }
 
 .footer {
@@ -136,7 +137,7 @@
 
 @media (max-width: 56.25rem) {
   .cartContainer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -153,21 +154,10 @@
   .cart {
     width: 85%;
     position: initial;
-    animation: showCart .3s ease;
+   
   }
 
-  @keyframes showCart {
-    from {
-      opacity: 0;
-      transform: scale(.8);
-    }
   
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
   .title {
     font-size: 1.25rem;
   }
