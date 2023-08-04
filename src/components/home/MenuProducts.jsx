@@ -25,6 +25,7 @@ const MenuProducts = () => {
       <h1 className={styles.title}>Cardápio</h1>
 
       <ul className={styles.list}>
+        {loading && <Loading />}
         {data.map((item) => (
           <Product key={item.id} data={item} />
         ))}
