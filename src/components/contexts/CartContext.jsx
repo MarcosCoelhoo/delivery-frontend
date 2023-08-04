@@ -5,7 +5,6 @@ export const CartContext = React.createContext();
 export const CartStorage = ({ children }) => {
   const [isOpenCart, setIsOpenCart] = React.useState(false);
   const containerRef = React.useRef();
-  const modalRef = React.useRef();
   const size = window.innerWidth;
 
   React.useEffect(() => {
@@ -21,16 +20,6 @@ export const CartStorage = ({ children }) => {
   }, [isOpenCart, size]);
 
   React.useEffect(() => {
-    if (modalRef.current) {
-      modalRef.current.scrollIntoView({
-        block: 'center',
-        inline: 'center',
-        behavior: 'smooth',
-      });
-    }
-  }, [isOpenCart]);
-
-  React.useEffect(() => {
     if (size > 900) {
       setIsOpenCart(true);
     } else {
@@ -40,7 +29,7 @@ export const CartStorage = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ isOpenCart, setIsOpenCart, containerRef, modalRef, size }}
+      value={{ isOpenCart, setIsOpenCart, containerRef, size }}
     >
       {children}
     </CartContext.Provider>

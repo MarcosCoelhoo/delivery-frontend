@@ -8,6 +8,8 @@ import { CartStorage } from '../contexts/CartContext';
 import CartButton from './CartButton';
 
 import styles from '../styles/home/Home.module.css';
+import ProductModal from './ProductModal';
+import { ProductModalStorage } from '../contexts/ProductModalContext';
 
 const Home = () => {
   return (
@@ -16,8 +18,11 @@ const Home = () => {
 
       <CartStorage>
         <main className={`${styles.main} sectionContainer`}>
-          <MenuProducts />
-          <Cart />
+          <ProductModalStorage>
+            <ProductModal />
+            <MenuProducts />
+            <Cart />
+          </ProductModalStorage>
 
           <CartButton className={styles.cartButton} />
         </main>

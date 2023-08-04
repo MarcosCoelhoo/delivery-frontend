@@ -1,0 +1,152 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(0 0 0 / .3);
+  padding-top: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background: var(--color-grey-50);
+  border: 1px solid var(--color-grey-200);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  max-width: 85%;
+}
+
+.content {
+  border-bottom: 1px solid var(--color-grey-200);
+  margin-bottom: 1.5rem;
+}
+
+.product {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.image {
+  max-width: 5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column; 
+}
+
+.name {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-grey-950);
+  text-transform: capitalize;
+}
+
+.description {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-grey-800);
+}
+
+.payment {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.price {
+  color: var(--color-base);
+  font-family: var(--font-text);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  width: fit-content;
+  height: fit-content;
+  gap: 1.5rem;
+  border: 1px solid var(--color-grey-200);
+  border-radius: 0.25rem;
+  font-family: var(--font-text);
+}
+
+.count {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-grey-950);
+}
+
+.quantity button {
+  background: none;
+  color: var(--color-base);
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.button {
+  width: 100%;
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-base-very-light);
+  background: var(--color-base);
+  border-radius: 0.25rem;
+  border: 1px solid var(--color-base);
+  padding: 0.75rem 0.75rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.button:hover {
+  background: var(--color-grey-50);
+  color: var(--color-base);
+  
+} 
+
+@media (max-width: 40.625rem) {
+  .modal {
+    padding: 0.75rem 1rem;
+  }
+  
+  .image {
+    max-width: 3rem;
+  }
+
+  .name {
+    font-size: 1.25rem;
+
+  }
+
+  .description {
+    font-size: 0.75rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  .count {
+    font-size: 1.25rem;
+  }
+
+  .button {
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
+  }
+}

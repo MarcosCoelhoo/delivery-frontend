@@ -6,26 +6,23 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 
 const Cart = () => {
-  const { isOpenCart, setIsOpenCart, containerRef, modalRef, size } =
+  const { isOpenCart, setIsOpenCart, containerRef, size } =
     React.useContext(CartContext);
 
-  function handleClickOutside(event) {
-    if (event.target === containerRef.current && size < 900) {
+  function handleClickOutside({ target }) {
+    if (target === containerRef.current && size < 900) {
       setIsOpenCart(!isOpenCart);
     }
   }
 
-  React.useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  });
-
   if (!isOpenCart) return null;
   return (
-    <section ref={containerRef} className={styles.cartContainer}>
-      <div ref={modalRef} className={styles.cart}>
+    <section
+      ref={containerRef}
+      onClick={handleClickOutside}
+      className={styles.cartContainer}
+    >
+      <div className={`${styles.cart} animeModal`}>
         <div className={styles.header}>
           <ShoppingCartSimple size={32} weight="duotone" />
           <h1 className={styles.title}>Carrinho</h1>
